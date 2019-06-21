@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Receitas</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color:#ffffe0;">
+  <ion-list> 
+     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchRecipes()"></ion-searchbar>
+
+    <ion-item *ngFor="let recipe of recipes" (click)="onSelect(recipe)">
+      <ion-thumbnail item-left>
+        <img src="{{recipe.thumbnailImageUrl}}" alt="{{recipe.recipeName}}" title="{{recipe.recipeName}}" />
+      </ion-thumbnail>
+      <h2 class="recipe-name">{{recipe.recipeName}}</h2>
+      <span class="cooking-time">Tempo de Preparo:</span> 
+      <span class="cooking-time-value">{{recipe.totalTimeInSeconds / 60}} min</span>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Descrissão</ion-label>
+        <ion-input type="text" formControlName="descrissao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Embalagem</ion-label>
+        <ion-input type="text" formControlName="embalagem"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Peso</ion-label>
+        <ion-input type="number" formControlName="peso"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Unidade</ion-label>
+        <ion-input type="number" formControlName="unidade"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Quantidade</ion-label>
+        <ion-input type="number" formControlName="quantidade"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Valor</ion-label>
+        <ion-input type="text" formControlName="valor"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button block type="submit" (click)="onSubmit()">Salvar</button>
+      </div>
+  </form>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{ recipe.recipeName}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <img src="{{recipe.largeImageUrl}}" />
+    <div class="recipe-details">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <div class="recipe-ingredients-count">
+                        <div>{{recipe.ingredients.length}}</div>
+                        Ingredientes                        
+                    </div>
+                </ion-col>
+                <ion-col>
+                     <div class="recipe-servings">
+                        <div>{{recipe.numberOfServings}}</div>
+                         Serve a quantos
+                    </div>
+                </ion-col>
+                <ion-col>
+                     <div class="recipe-time">
+                        <div>{{recipe.totalTimeInSeconds / 60}}</div>
+                         Minutos
+                    </div>
+                </ion-col>
+            </ion-row>               
+               <ion-row>               
+                 <ion-col>
+                <div class="recipe-preparation" *ngFor="let preparation of recipe.preparations">
+                   <div>                       
+                    <p>
+                       {{preparation}}
+                   </p></div>
+                     </div>
+           </ion-col>
+            </ion-row>
+             
+        </ion-grid> 
+    </div>
+    <ion-list>
+        <ion-list-header class="ingredients-header">
+            Ingredientes
+        </ion-list-header>
+        <button ion-item *ngFor="let ingredient of recipe.ingredients">
+            <ion-icon name="cafe" item-start></ion-icon>
+            {{ingredient}}
+        </button>
+    </ion-list>
+</ion-content>
