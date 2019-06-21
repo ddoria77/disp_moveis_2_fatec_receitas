@@ -19,7 +19,7 @@ Observação: Se você estiver em um sistema operacional baseado em Unix, será 
 
 <b>Clonando o repositório</b>
 Parar clonar o repositório, execute:<br>
-1) git clone git@github.com:ddoria77/disp_moveis_2_fatec/.git<br>
+1) git clone git@github.com:ddoria77/disp_moveis_2_fatec_receitas/.git<br>
 2) Instalar dependências<br>
 
 npm install<br>
