@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>contato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#cce8fd;" >
+    <div>
+        <a style="display:block;" on-click="goToHome()" >
+          <img src="./../../assets/imgs/mail.jpg" style="display: block; width: 50%; margin-left: auto; margin-right: auto;">
+        </a>
+      </div>
+      <div class="spacer" style="width:320px;height:13px;" ></div>
+      <h2 id="contato-heading1" style="color:#000000;font-weight:lighter;">Venhaaã!</h2>
+      <div class="spacer" style="width:320px;height:13px;" ></div>
+      <ion-list>
+
+          <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Data de nascimento</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label stacked>Conte aqui pra mim</ion-label>
+            <ion-textarea #msgInput rows="3" maxLength="500" (keyup)="resize()"></ion-textarea>
+          </ion-item>        
+        </ion-list>
+        <div class="spacer" style="width:320px;height:13px;" ></div>
+      
+      <button on-click="goToHome()" ion-button color="primary" class="button button-stable button-block" >Enviar</button>
+  <div class="spacer" style="width:320px;height:13px;" ></div>
+</ion-content>
